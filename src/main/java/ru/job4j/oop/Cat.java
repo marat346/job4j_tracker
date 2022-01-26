@@ -5,13 +5,14 @@ package ru.job4j.oop;
     private String name;
 
         public void show() {
-        System.out.println(this.name + this.food );
+        System.out.println(this.name + this.food);
         }
 
        public void eat(String meat) {
         this.food = meat;
         }
-        public void giveNick(String nick){
+
+        public void giveNick(String nick) {
             this.name = nick;
         }
 
