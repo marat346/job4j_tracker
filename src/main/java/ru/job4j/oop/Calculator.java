@@ -2,20 +2,25 @@ package ru.job4j.oop;
 
 public class Calculator {
     private static int x = 5;
-    private Calculator calculatorsumAllOperation;
 
-    public static int sum(int y) {return x + y;}
-
-    public int multiply(int a) {return x * a;}
-
-    public int divide(int r){return r / x;}
-
-    public int sumAllOperation(){
-        return sum() + multiply() + divide() + minus() ;
+    public static int sum(int y) {
+        return x + y;
     }
 
-    public static int minus(int z){
+    public int multiply(int a) {
+        return x * a;
+    }
+
+    public int divide(int r) {
+        return r / x;
+    }
+
+    public static int minus(int z) {
         return x - z;
+    }
+
+    public int sumAllOperation(int x) {
+        return sum(x) + multiply(x) + divide(x) + minus(x);
     }
 
     public static void main(String[] args) {
@@ -35,7 +40,7 @@ public class Calculator {
                   int rsldivide = calculatordivide.divide(10);
                            System.out.println(rsldivide);
 
-                     int rslsumma = calculatorsumAllOperation.sumAllOperation();
+                     int rslsumma = calculatorsumAllOperation.sumAllOperation(x);
                                 System.out.println(rslsumma);
 
     }
