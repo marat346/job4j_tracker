@@ -16,7 +16,7 @@ public class Calculator {
     }
 
     public static int minus(int z) {
-        return x - z;
+        return z - x;
     }
 
     public int sumAllOperation(int x) {
@@ -25,23 +25,21 @@ public class Calculator {
 
     public static void main(String[] args) {
            Calculator calculator = new Calculator();
-           Calculator calculatordivide = new Calculator();
-           Calculator calculatorsumAllOperation = new Calculator();
 
         int result = sum(10);
              System.out.println(result);
 
-           int rsl = calculator.multiply(5);
-                  System.out.println(rsl);
+        int rsl = calculator.multiply(5);
+              System.out.println(rsl);
 
-                 int rslminus = minus(5);
-                       System.out.println(rslminus);
+        int rslminus = minus(5);
+              System.out.println(rslminus);
 
-                  int rsldivide = calculatordivide.divide(10);
-                           System.out.println(rsldivide);
+        int rsldivide = calculator.divide(10);
+               System.out.println(rsldivide);
 
-                     int rslsumma = calculatorsumAllOperation.sumAllOperation(x);
-                                System.out.println(rslsumma);
+        int rslsumma = calculator.sumAllOperation(x);
+               System.out.println(rslsumma);
 
     }
 }
