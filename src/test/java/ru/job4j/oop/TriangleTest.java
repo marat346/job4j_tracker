@@ -26,4 +26,14 @@ public class TriangleTest {
         double rsl = triangle.area();
         assertThat(rsl, closeTo(0.499, 0.001));
     }
+
+    @Test
+    public void when00and10and10ThenMinus1() {
+        Point a = new Point(0, 0);
+        Point b = new Point(1, 0);
+        Point c = new Point(1, 0);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        assertThat(rsl, closeTo(-1, 0.001));
+    }
 }
