@@ -5,7 +5,7 @@ package ru.job4j.oop;
         private String food;
 
         public void eat(String meat) {
-        this.food = meat;
+            this.food = meat;
         }
 
         private String name;
@@ -19,17 +19,17 @@ package ru.job4j.oop;
         }
 
         public static void main(String[] args) {
-                Cat gav = new Cat();
-                    gav.eat("kotleta");
-                        gav.giveNick("Liza");
-                            gav.show();
+            Cat gav = new Cat();
+            gav.eat("kotleta");
+            gav.giveNick("Liza");
+            gav.show();
 
-                Cat black = new Cat();
-                    black.eat("fish");
-                        black.giveNick("Voron");
-                            black.show();
+            Cat black = new Cat();
+            black.eat("fish");
+            black.giveNick("Voron");
+            black.show();
 
             System.out.println("There are black's food.");
             System.out.println("There are gav's food.");
         }
- }
+    }
