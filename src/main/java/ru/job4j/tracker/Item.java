@@ -8,7 +8,7 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
-    public Item(String name) {
+    public Item() {
         this.name = name;
     }
 
