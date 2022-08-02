@@ -9,7 +9,6 @@ public class Item {
     private LocalDateTime created = LocalDateTime.now();
 
     public Item() {
-        this.name = name;
     }
 
     public Item(int id, String name) {
