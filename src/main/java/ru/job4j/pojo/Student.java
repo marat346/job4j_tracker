@@ -5,7 +5,7 @@ public class Student {
     private String group;
     private String dateEntrance;
 
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
 
@@ -13,7 +13,7 @@ public class Student {
         this.name = name;
     }
 
-    public String getGroup(String group) {
+    public String getGroup() {
         return group;
     }
 
@@ -21,7 +21,7 @@ public class Student {
         this.group = group;
     }
 
-    public String getDateEntrance(String dateEntrance) {
+    public String getDateEntrance() {
         return dateEntrance;
     }
 
