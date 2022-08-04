@@ -11,16 +11,17 @@ public class Library {
         books[1] = detective;
         books[2] = fantasy;
         books[3] = classic;
+        Book temp = books[0];
+        books[0] = books[3];
+        books[3] = temp;
         for (int i = 0; i < books.length; i++) {
-            Book temp = books[0];
-            books[0] = books[3];
-            books[3] = temp;
             Book tot = books[i];
             System.out.println(tot.getName() + "-" + tot.getPage());
         }
+
         for (int i = 0; i < books.length; i++) {
             Book neo = books[i];
-            if (neo.equals(classic)) {
+            if ("Clean code".equals(neo.getName())) {
                 System.out.println(neo.getName() + "-" + neo.getPage());
             }
         }
