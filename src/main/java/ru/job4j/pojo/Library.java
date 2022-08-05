@@ -18,7 +18,7 @@ public class Library {
             Book tot = books[i];
             System.out.println(tot.getName() + "-" + tot.getPage());
         }
-        System.out.println("Вывод книги :");
+        System.out.println("Выбор книги :");
         for (int i = 0; i < books.length; i++) {
             Book neo = books[i];
             if ("Clean code".equals(neo.getName())) {
