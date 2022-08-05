@@ -8,13 +8,13 @@ public class Tracker {
     private int size = 0;
     private String key = "совпадение";
 
-    public Item add(Item item) { /// добавление заявок///
+    public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
         return item;
     }
 
-    public Item[] findAll() { /// получение списка всех заявок ////
+    public Item[] findAll() {
         Item[] result = new Item[items.length];
         for (int index = 0; index < items.length; index++) {
             Item tot = items[index];
@@ -30,7 +30,7 @@ public class Tracker {
         return result;
     }
 
-    public Item[] findByName(String key) { ////получение списка по имени/////
+    public Item[] findByName(String key) {
         Item[] name = new Item[items.length];
         Item[] rsl = new Item[name.length];
         int size = 0;
@@ -48,7 +48,7 @@ public class Tracker {
         return rsl;
     }
 
-    public Item findById(int id) { /// получение заявки ////
+    public Item findById(int id) {
         Item rsl = null;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
