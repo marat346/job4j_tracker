@@ -6,15 +6,15 @@ public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
-    private String key = name.getName();
+    private String key = "совпадение";
 
-    public Item add(Item item) {/// добавление заявок///
+    public Item add(Item item) { /// добавление заявок///
         item.setId(ids++);
         items[size++] = item;
         return item;
     }
 
-    public Item[] findAll() {/// получение списка всех заявок ////
+    public Item[] findAll() { /// получение списка всех заявок ////
         Item[] result = new Item[items.length];
         for (int index = 0; index < items.length; index++) {
             Item tot = items[index];
@@ -30,7 +30,7 @@ public class Tracker {
         return result;
     }
 
-    public Item[] findByName(String key) {////получение списка по имени/////
+    public Item[] findByName(String key) { ////получение списка по имени/////
         Item[] name = new Item[items.length];
         Item[] rsl = new Item[name.length];
         int size = 0;
