@@ -8,6 +8,8 @@ public class Tracker {
     private int size = 0;
     private String key = "совпадение";
 
+
+
     public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
@@ -16,7 +18,7 @@ public class Tracker {
 
     public Item[] findAll() {
         Item[] result = new Item[items.length];
-        for (int index = 0; index < items.length; index++) {
+        for (int index = 0; index < items.length - 1; index++) {
             Item tot = items[index];
             if (tot != null) {
                 items[size] = tot;
