@@ -16,7 +16,7 @@ public class ShopDropTest {
 
     @Test
     public void whenDropLast() {
-        Product[] products = new Product[3];
+        Product[] products = new Product[2];
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
         Product[] rsl = ShopDrop.delete(products, 1);
