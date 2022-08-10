@@ -6,7 +6,6 @@ public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
-    private String key;
 
     public Item add(Item item) {
         item.setId(ids++);
@@ -15,37 +14,20 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] result = new Item[items.length];
-        for (int index = 0; index < items.length - 1; index++) {
-            Item tot = items[index];
-            if (tot != null) {
-                items[size] = tot;
-                size++;
-            }
-        }
-        result = Arrays.copyOf(result, size);
-        for (int index = 0; index < result.length; index++) {
-            System.out.println(result[index]);
-        }
-        return result;
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String key) {
-        Item[] name = new Item[items.length];
-        Item[] rsl = new Item[name.length];
-        int size = 0;
-        for (int index = 0; index < rsl.length; index++) {
+        Item[] rsl = new Item[size];
+        int count = 0;
+        for (int index = 0; index < size; index++) {
             Item clue = rsl[index];
             if (key.equals(clue.getName())) {
-                rsl[size] = clue;
-                size++;
+                rsl[count] = clue;
+                count++;
             }
         }
-        rsl = Arrays.copyOf(rsl, size);
-        for (int index = 0; index < rsl.length; index++) {
-            System.out.println(rsl[index]);
-        }
-        return rsl;
+        return Arrays.copyOf(rsl, count);
     }
 
     public Item findById(int id) {
