@@ -5,11 +5,13 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI  {
 
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+
     public static void main(String[] args) {
         Item item = new Item();
+        Item tot = new Item();
         LocalDateTime datetime = item.getCreated();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        String currentDateTimeFormat = datetime.format(formatter);
-        System.out.println(currentDateTimeFormat);
+        String currentDateTimeFormat = datetime.format(FORMATTER);
+        System.out.println(currentDateTimeFormat + "    изменился     " + tot);
     }
 }
