@@ -16,9 +16,9 @@ public class Matches {
                     if (matches > 0 && matches <= 3) {
                         count -= matches;
                         System.out.println("Осталось" + " " + count + " " + "спичек");
-                        turn = !turn;
                     } else if (matches < count) {
                         System.out.println("Неправильно вели цифру");
+                        turn = !turn;
                     }
                 }
 
