@@ -9,13 +9,16 @@ public class Matches {
         boolean turn = true;
         int count = 11;
         while (count > 0) {
-            for (int i = 0; i < count; i++) {
-                    String player = turn ? "Первый игрок" : "Второй игрок";
-                    System.out.println(player + " введите число от 1 до 3:");
-                    int matches = Integer.parseInt(input.nextLine());
+            for (int i = 0; i <= count; i++) {
+                      String player = turn ? "Первый игрок" : "Второй игрок";
+                      System.out.println(player + " введите число от 1 до 3:");
+                      int matches = Integer.parseInt(input.nextLine());
                     if (matches > 0 && matches <= 3) {
                         count -= matches;
+                        System.out.println("Осталось" + " " + count + " " + "спичек");
                         turn = !turn;
+                    } else if (matches < count) {
+                        System.out.println("Неправильно вели цифру");
                     }
                 }
 
