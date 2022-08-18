@@ -7,7 +7,7 @@ public class Car implements Vehicle {
     }
 
     @Override
-    public void number(int value, int value1, int value2) {
+    public void number(int value) {
         System.out.println("Номер транспорта" + " " + value);
     }
 }

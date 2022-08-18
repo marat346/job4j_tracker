@@ -7,7 +7,7 @@ public class Train implements Vehicle {
     }
 
     @Override
-    public void number(int value, int value1, int value2) {
+    public void number(int value2) {
         System.out.println("Номер транспорта" + " " + value2);
     }
 
@@ -18,7 +18,7 @@ public class Train implements Vehicle {
         Vehicle[] vehicles = new Vehicle[]{train, car, airplane};
         for (Vehicle a : vehicles) {
             a.move();
-            a.number(1234, 2345, 7456);
+            a.number(1234);
         }
     }
 }

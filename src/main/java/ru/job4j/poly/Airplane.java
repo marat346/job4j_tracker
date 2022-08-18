@@ -7,7 +7,7 @@ public class Airplane implements Vehicle {
     }
 
     @Override
-    public void number(int value, int value1, int value2) {
-        System.out.println("Номер транспорта" + " " + value1);
+    public void number(int value) {
+        System.out.println("Номер транспорта" + " " + value);
     }
 }
