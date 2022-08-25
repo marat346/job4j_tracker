@@ -11,13 +11,12 @@ public class UserStore {
         return null;
     }
 
-
     public static boolean validate(User user) throws UserInvalidException {
         if (user.isValid()) {
+            System.out.println(user);
         }
         return false;
     }
-
 
     public static void main(String[] args) {
         User[] users = {
