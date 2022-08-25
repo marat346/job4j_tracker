@@ -98,7 +98,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
-                new String[]{"0", String.valueOf(one.getId()), "1"}
+                new String[]{"0", "1"}
         );
         UserAction[] actions = new UserAction[]{
                 new ShowAllAction(out),
@@ -114,6 +114,33 @@ public class StartUITest {
                         + one + ln
                         + "Menu:" + ln
                         + "0. Show all items" + ln
+                        + "1. Exit Program" + ln
+                        + "=== Exit Program ===" + ln
+        );
+    }
+
+    @Test
+    public void whenFindNameItem() {
+        Output out = new StubOutput();
+        Tracker tracker = new Tracker();
+        Item one = tracker.add(new Item("test1"));
+        Input in = new StubInput(
+                new String[]{"0", String.valueOf(one.getId()), "1"}
+        );
+        UserAction[] actions = new UserAction[]{
+                new FindNameAction(out),
+                new ExitProgramAction(out),
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(out.toString()).isEqualTo(
+                "Menu:" + ln
+                        + "0. Find items by name" + ln
+                        + "1. Exit Program" + ln
+                        + "=== Find items by name ===" + ln
+                        + "Заявки с именем: " + "1" + " не найдены." + ln
+                        + "Menu:" + ln
+                        + "0. Find items by name" + ln
                         + "1. Exit Program" + ln
                         + "=== Exit Program ===" + ln
         );
