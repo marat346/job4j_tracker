@@ -13,7 +13,7 @@ public class UserStore {
 
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() || String.length(user)) {
+        if (user.isValid()) {
         }
         return false;
     }
@@ -26,16 +26,12 @@ public class UserStore {
 
         try {
             User user = findUser(users, "Petr Arsentev");
-            if (findUser(false,"Petr Arsentev")) {
-                System.out.println("This user has an access");
-            }
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
         } catch (UserNotFoundException e) {
             e.printStackTrace();
-        }catch (UserInvalidException a) {
-            a.printStackTrace();
+
         }
     }
 }
