@@ -10,11 +10,12 @@ public class FindEl {
                 break;
             }
         }
-        return rsl;
         if (rsl == -1) {
             throw new IllegalArgumentException("Key could not be less then null");
         }
+        return rsl;
     }
+
     public static void main(String[] args) throws ElementNotFoundException {
         String[] value = {"apple", "cake", "bread"};
         String key = "cak";
@@ -25,5 +26,3 @@ public class FindEl {
         }
     }
 }
-
-
