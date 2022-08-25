@@ -18,9 +18,8 @@ public class FindEl {
 
     public static void main(String[] args) throws ElementNotFoundException {
         String[] value = {"apple", "cake", "bread"};
-        String key = "cak";
         try {
-            FindEl.indexOf(value, key);
+            FindEl.indexOf(value, "cak");
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
