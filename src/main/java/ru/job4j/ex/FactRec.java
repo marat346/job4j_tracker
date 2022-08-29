@@ -6,9 +6,8 @@ public class FactRec {
             return 1;
 
         }
-            return calc(n - 1) * n;
-        }
-
+        return calc(n - 1) * n;
+    }
 
     public static void main(String[] args) {
         int rsl = calc(3);
