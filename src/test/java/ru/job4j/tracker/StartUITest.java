@@ -2,8 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.format.DateTimeFormatter;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StartUITest {
@@ -123,12 +121,11 @@ public class StartUITest {
 
     @Test
     public void whenFindNameItem() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
-                new String[]{"0", String.valueOf(one.getName()), "1"}
+                new String[]{"0", one.getName(), "1"}
         );
         UserAction[] actions = new UserAction[]{
                 new FindNameAction(out),
@@ -141,7 +138,7 @@ public class StartUITest {
                         + "0. Find items by name" + ln
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
-                        + "Item{id=1, name='test1', created=" + one.getCreated().format(formatter) + "}" + ln
+                        + one + ln
                         + "Menu:" + ln
                         + "0. Find items by name" + ln
                         + "1. Exit Program" + ln
