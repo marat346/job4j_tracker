@@ -32,10 +32,12 @@ public class ValidateInputTest {
     public void whenMultipleCorrectInvalidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[]{"1", "1", "1", "1"}
+                new String[]{"1", "15", "17"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        int selected1 = input.askInt("Enter menu:");
+        int selected2 = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(1);
     }
 
