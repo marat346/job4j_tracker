@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ValidateInputTest {
+
     @Test
     public void whenInvalidInput() {
         Output out = new StubOutput();
