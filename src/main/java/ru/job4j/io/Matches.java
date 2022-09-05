@@ -7,6 +7,7 @@ public class Matches {
         Scanner input = new Scanner(System.in);
         System.out.println("Игра 11.");
         boolean turn = true;
+
         int count = 11;
         while (count > 0 && count >= 3) {
             String player = turn ? "Первый игрок" : "Второй игрок";
