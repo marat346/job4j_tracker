@@ -1,8 +1,8 @@
-package ru.job4j.Factory;
+package ru.job4j.factory;
 
-public class ToyotaFactory implements CarsFactory{
+public class ToyotaFactory implements CarsFactory {
     @Override
-    public Sedan createSedan(){
+    public Sedan createSedan() {
         return new  ToyotaSedan();
     }
 

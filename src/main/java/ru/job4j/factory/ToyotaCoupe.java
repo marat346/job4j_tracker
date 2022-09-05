@@ -1,6 +1,6 @@
-package ru.job4j.Factory;
+package ru.job4j.factory;
 
-public class ToyotaCoupe implements Coupe{
+public class ToyotaCoupe implements Coupe {
     public ToyotaCoupe() {
         System.out.println("Create ToyotaCoupe");
     }

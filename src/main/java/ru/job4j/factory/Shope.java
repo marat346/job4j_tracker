@@ -1,9 +1,8 @@
-package ru.job4j.Factory;
+package ru.job4j.factory;
 
 public class Shope {
     public static void main(String[] args) {
-        CarsFactory factory;
-        factory = new ToyotaFactory();
+        CarsFactory factory = new FordFactory();
         factory.createSedan();
     }
 }
